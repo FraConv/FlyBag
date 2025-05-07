@@ -54,7 +54,7 @@ const Analytics: React.FC = () => {
             
             </div>
 
-            <div className="border-2 border-transparent w-[100%] h-[50%] absolute  mt-36 grid grid-cols-1 gap-[50px] z-10 left-0 place-items-center  max-[375px]:mt-[250px]">
+            <div className="border-2 border-transparent w-[100%] h-[50%] absolute  mt-36 grid grid-cols-1 gap-[50px] z-9 left-0 place-items-center  max-[375px]:mt-[250px]">
                 <div className="w-[219px] h-[81px] border-[3px] border-[#00C493] rounded-full pl-7 pt-3 grid grid-cols-2 shadow-black shadow-[0_1px_10px_rgba(0,0,0,0)]">
                     <div ><img className="w-12" src="Group 91.svg" alt="" /></div>
                     <div className="mt-[13%]"><span className="text-[#016F54] ml-[-35px]">Inventory</span></div>
