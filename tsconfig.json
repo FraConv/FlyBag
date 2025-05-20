@@ -1,21 +1,27 @@
 {
   "compilerOptions": {
+    /* -- BASE -------------------------------------------------- */
     "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    /* -- REACT ------------------------------------------------- */
+    "jsx": "react-jsx",          // <<--- FA SPARIRE l’errore '--jsx' is not set
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+
+    /* -- PATH ALIAS ------------------------------------------- */
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+
+  /* File da analizzare: tutta la cartella src + vite.config.ts */
+  "include": ["src", "vite.config.ts"]
 }
