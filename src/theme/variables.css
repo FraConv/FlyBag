@@ -210,18 +210,38 @@ body {
 
 @font-face {
   font-family: 'Gotham';
-  src: url('./assets/fonts/Gotham-Regular.woff2') format('woff2');
-  font-weight: 400;
+  src: url('/fonts/GothamMedium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Gotham';
-  src: url('./assets/fonts/Gotham-Bold.woff2') format('woff2');
+  src: url('/fonts/GothamBold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamLight.ttf') format('truetype'),
+       url('/fonts/Gotham-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamThin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham';
+  font-weight: 300; 
 }

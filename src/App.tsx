@@ -25,6 +25,7 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 import './theme/variables.css';
+import Tutorial from './pages/user/Tutorial';
 
 setupIonicReact();
 
@@ -34,11 +35,22 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/Login" component={Login} />
+
+          {/* Merchant */}
+
           <Route exact path="/Analytics" component={Analytics} />
           <Route exact path="/Scan" component={Scan} />
           <Route exact path="/Shop" component={Shop} />
           <Route exact path="/Recensioni" component={Recensioni} />
+          
+
+          {/* User */}
+          <Route exact path="/user/tutorial" component={Tutorial} />
+
           <Route exact path="/" render={() => <Redirect to="/analytics" />} />
+
+          
+
         </IonRouterOutlet>
       </IonTabs>
     </IonReactRouter>
