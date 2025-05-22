@@ -1,0 +1,45 @@
+#main {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#main > img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:35%;
+    left:50%;
+}
+
+#main > h1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:55%;
+    left:50%;
+    color: black;
+
+    font-family: "Ancizar Sans", sans-serif;
+    font-size: 200%;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+
+#main > h1 > div {
+    position: relative;
+}
+
+#main > h1 > span {
+    color: var(--ion-color-primary, black);
+}
+
+#main > p {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:60%;
+    left:50%;
+    color: black;
+
+    font-family: "Ancizar Sans", sans-serif;
+    font-size: 125%;
+}
