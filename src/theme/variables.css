@@ -300,7 +300,7 @@ body {
 
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamThin.otf') format('opentype');
+  src: url('/fonts/Gotham-Thin.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;

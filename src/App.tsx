@@ -26,6 +26,8 @@ import '@ionic/react/css/display.css';
 
 import './theme/variables.css';
 import Tutorial from './pages/user/Tutorial';
+import Profile from './pages/user/Profile';
+import MerchantTutorial from './pages/merchant/MerchTutorial';
 
 setupIonicReact();
 
@@ -37,7 +39,7 @@ const App: React.FC = () => (
           <Route exact path="/Login" component={Login} />
 
           {/* Merchant */}
-
+          <Route exact path="/merchant/tutorial" component={MerchantTutorial} />
           <Route exact path="/Analytics" component={Analytics} />
           <Route exact path="/Scan" component={Scan} />
           <Route exact path="/Shop" component={Shop} />
@@ -46,7 +48,7 @@ const App: React.FC = () => (
 
           {/* User */}
           <Route exact path="/user/tutorial" component={Tutorial} />
-
+          <Route exact path="/user/profile" component={Profile} />
           <Route exact path="/" render={() => <Redirect to="/analytics" />} />
 
           

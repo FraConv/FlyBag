@@ -18,30 +18,26 @@ interface TutorialItem {
 
 const tutorialData: TutorialItem[] = [
     {
-        svgPath: "tutorial/tut_img_1.svg",
-        title: "Search The Shop",
-        description: "Find the shop you like, that sell what you want."
+        svgPath: "tutorial/tut_img_6.svg",
+        title: "Scan The Product",
+        description: "Scan the product the client wants."
     },
     {
-        svgPath: "tutorial/tut_img_2.svg",
-        title: "Go To The Shop",
-        description: "Reach the shop using the map!"
+        svgPath: "tutorial/tut_img_7.svg",
+        title: "Check Information",
+        description: "Check the information about the product choosen."
     },
     {
-        svgPath: "tutorial/tut_img_3.svg",
-        title: "Find The Product",
-        description: "Choose the product you want to buy in the shop!"
+        svgPath: "tutorial/tut_img_8.svg",
+        title: "Packaging",
+        description: "Pack the product bought from the buyer."
     },
     {
-        svgPath: "tutorial/tut_img_4.svg",
-        title: "Scan the QR Code",
-        description: "Scan the QR Code that you will find near the shop checkout!"
+        svgPath: "tutorial/tut_img_9.svg",
+        title: "Shipping",
+        description: "Wait for the pick up of the package."
     },
-    {
-        svgPath: "tutorial/tut_img_5.svg",
-        title: "Ship It",
-        description: "Let the seller pack your item and ship it to your address!"
-    },
+
 ];
 
 const styles = {
@@ -160,7 +156,7 @@ const LoadingSpinner: React.FC = () => (
     </IonPage>
 );
 
-const Tutorial: React.FC = () => {
+const MerchantTutorial: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = tutorialData.length;
     const [isAnimating, setIsAnimating] = useState(false);
@@ -270,4 +266,4 @@ const Tutorial: React.FC = () => {
     );
 };
 
-export default Tutorial;
+export default MerchantTutorial;
