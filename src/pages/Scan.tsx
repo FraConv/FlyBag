@@ -81,13 +81,13 @@ const Scan: React.FC = () => {
   };
 
   return (
-    <IonPage>
+    <IonPage className='bg-white'>
       <button onClick={goBack} className="bg-[#005640] text-white px-3 py-1 rounded-full shadow z-50">
   Torna indietro
 </button>
       <div className="bg-white h-full w-full absolute left-0 top-0 items-center">
       <div className="absolute top-16 w-full h-auto -translate-x-1/2 left-1/2 text-white flex justify-center">
-        <span className="text-shadow-lg">Take a photo of the product</span>
+        <span style={{color:"white"}} className="text-shadow-lg font-medium">Take a photo of the product</span>
       </div>
 
       <video
@@ -146,18 +146,18 @@ const Scan: React.FC = () => {
         <div
           className={`fixed z-20 bg-white w-72 h-32 top-32 rounded-2xl text-black text-[13px] p-5 -translate-x-1/2 left-1/2 transition-opacity duration-200 ${fade ? "opacity-100" : "opacity-0"}`}
         >
-          <span className="text-[18px] font-normal text-center">Cancellare la foto scattata?</span>
+          <span style={{color:"black"}} className="text-[18px] font-normal text-center">Cancellare la foto scattata?</span>
           <IonButton fill="clear"
             className="rounded-full w-24 h-1 bg-red-800 border-3 border-red-800 fixed left-5 text-white top-20 text-[12px] cursor-pointer"
             onClick={cancelPhoto}
           >
-            <span className="text-[18px] font-medium mt-[-6px]">Si</span>
+            <span style={{color:"white"}} className="text-[18px] font-medium mt-[-6px]">Si</span>
           </IonButton>
           <IonButton fill="clear"
-            className="rounded-full w-24 h-1 border-[3px] border-black fixed right-5 text-black top-20 text-[12px] cursor-pointer"
+            className="rounded-full w-24 h-1 border-[3px] border-black fixed right-5 top-20 text-[12px] cursor-pointer"
             onClick={refuseCancel}
           >
-            <span className="text-[18px] font-medium mt-[-6px]">No</span>
+            <span style={{color:"black"}} className="text-[18px] font-medium mt-[-6px]">No</span>
           </IonButton>
         </div>
       )}
