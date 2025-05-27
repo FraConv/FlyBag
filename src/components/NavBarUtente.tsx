@@ -11,7 +11,7 @@ const NavBarUtente: React.FC = () => {
   };
 
   return (
-      <div className="w-[250px] h-[50px] bg-white absolute bottom-[25px] left-1/2 -translate-x-1/2 rounded-full shadow-[0px_10px_35px_rgba(0,0,0,0.4)] flex justify-center items-center gap-[20px] z-10">
+      <div className="w-[250px] h-[50px] bg-white absolute bottom-[25px] left-1/2 -translate-x-1/2 rounded-full shadow-[0px_1px_10px_rgba(0,0,0,0.4)] flex justify-center items-center gap-[20px] z-10">
         {/* Analytics */}
         <IonButton
           style={{ "--box-shadow": "none" }}
@@ -30,7 +30,7 @@ const NavBarUtente: React.FC = () => {
 
         {/* Scan */}
         <IonButton
-          className="w-[65px] h-[65px] -mt-[50px] rounded-full shadow-[0px_10px_35px_rgba(0,0,0,0.2)]"
+          className="w-[65px] h-[65px] -mt-[50px] rounded-full shadow-[0px_1px_9px_rgba(0,0,0,0.60)]"
           color="guriguti"
           expand="block"
           shape="round"

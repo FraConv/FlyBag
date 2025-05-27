@@ -1,4 +1,4 @@
-import { IonPage } from '@ionic/react';
+import { IonButton, IonPage } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 import NavBar from "../components/NavBar";
 import Graphic from '@/components/Graphic';
@@ -26,14 +26,18 @@ const Analytics: React.FC = () => {
         </div>
       </div>
 
-      <div className='border-[2px] border-[#d5e1e7] w-[18vh] top-[25rem] rounded-xl h-16 absolute left-[1.7rem] bottom-44 flex flex-col pt-1.5 pl-2'>
-        <span className='text-black font-gotham'>Orders</span>
-        <span className='text-black font-extrabold font-gotham'>128</span>
-      </div>
-      <div className='border-[2px] border-[#d5e1e7] w-[18vh] h-16 top-[25rem] rounded-xl absolute right-[1.7rem] bottom-44 flex flex-row gap-3 pt-1.5 pl-2'>
-        <img className='w-8' src="Vector.svg" alt="" />
-        <span className='font-extrabold text-black pt-3.5'>Inventory</span>
-      </div>
+      <IonButton fill='clear' className='border-[2px] border-[#00C493] w-[18vh] top-[25rem] rounded-full h-16 absolute left-[1.9rem] bottom-44'>
+        <div className="flex flex-col ml-[-58px] text-left gap-1">
+            <span className="text-black">Orders</span>
+            <span className="text-black font-extrabold font-gotham">128</span>
+        </div>
+      </IonButton>
+      <IonButton fill='clear' className='border-[2px] border-[#00C493] w-[18vh] h-16 top-[25rem] rounded-full absolute right-[1.9rem] bottom-44 '>
+        <div className="flex flex-row  text-left gap-2">
+        <img className='w-7' src="Inventario.svg" alt="" />
+        <span className='font-bold text-[black] text-[0.9rem] mt-2'>Inventory</span>
+        </div>
+      </IonButton>
 
       <Profilo></Profilo>
       <NavBar />

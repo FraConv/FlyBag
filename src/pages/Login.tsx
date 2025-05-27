@@ -6,7 +6,7 @@ import logo from "./logo.svg"
 const Login: React.FC = () => {
     return (
         <IonPage id="main">
-           <img src={logo} alt="Nope" />
+           
            <h1>Benvenuto in <span>Flybag</span></h1>
            <p>Let me penetrate you</p>
         </IonPage>

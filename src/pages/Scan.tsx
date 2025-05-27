@@ -1,4 +1,4 @@
-import { IonPage } from "@ionic/react"
+import { IonButton, IonPage } from "@ionic/react"
 import { useState, useEffect, useRef } from "react"
 import { useHistory } from "react-router";
 
@@ -144,21 +144,21 @@ const Scan: React.FC = () => {
 
       {showNotice && (
         <div
-          className={`fixed z-20 bg-[#EDF0F7] w-64 h-32 top-32 rounded-2xl text-black text-[13px] px-3 py-2 -translate-x-1/2 left-1/2 transition-opacity duration-200 ${fade ? "opacity-100" : "opacity-0"}`}
+          className={`fixed z-20 bg-white w-72 h-32 top-32 rounded-2xl text-black text-[13px] p-5 -translate-x-1/2 left-1/2 transition-opacity duration-200 ${fade ? "opacity-100" : "opacity-0"}`}
         >
-          <span>Cancellare la foto scattata?</span>
-          <div
-            className="rounded-full w-20 h-auto bg-red-800 border-3 border-red-800 fixed left-5 text-white top-20 text-[13px] cursor-pointer"
+          <span className="text-[18px] font-normal text-center">Cancellare la foto scattata?</span>
+          <IonButton fill="clear"
+            className="rounded-full w-24 h-1 bg-red-800 border-3 border-red-800 fixed left-5 text-white top-20 text-[12px] cursor-pointer"
             onClick={cancelPhoto}
           >
-            <span>Si</span>
-          </div>
-          <div
-            className="rounded-full w-20 h-auto border-3 border-black fixed right-5 text-black top-20 text-[13px] cursor-pointer"
+            <span className="text-[18px] font-medium mt-[-6px]">Si</span>
+          </IonButton>
+          <IonButton fill="clear"
+            className="rounded-full w-24 h-1 border-[3px] border-black fixed right-5 text-black top-20 text-[12px] cursor-pointer"
             onClick={refuseCancel}
           >
-            <span>No</span>
-          </div>
+            <span className="text-[18px] font-medium mt-[-6px]">No</span>
+          </IonButton>
         </div>
       )}
     </div>
