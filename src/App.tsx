@@ -49,7 +49,7 @@ const App: React.FC = () => (
           {/* User */}
           <Route exact path="/user/tutorial" component={Tutorial} />
           <Route exact path="/user/profile" component={Profile} />
-          <Route exact path="/" render={() => <Redirect to="/analytics" />} />
+          <Route exact path="/" render={() => <Redirect to="/login" />} />
 
           
 

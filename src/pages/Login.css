@@ -11,35 +11,39 @@
     left:50%;
 }
 
-#main > h1 {
+#main > div {
     position: absolute;
     transform: translate(-50%, -50%);
-    top:55%;
-    left:50%;
-    color: black;
+    width: 100vw;
+    height: 40%;
+    top: 75%;
+    left: 50%;
 
-    font-family: "Ancizar Sans", sans-serif;
-    font-size: 200%;
-    width: 100%;
+    justify-content: space-between;
     text-align: center;
-    font-weight: 700;
 }
 
-#main > h1 > div {
-    position: relative;
+#main > div > h1 {
+    margin-bottom: auto;
 }
 
-#main > h1 > span {
-    color: var(--ion-color-primary, black);
-}
-
-#main > p {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top:60%;
-    left:50%;
+#main > div > * {
     color: black;
+    font-family: "Gotham", sans-serif;
+}
 
-    font-family: "Ancizar Sans", sans-serif;
-    font-size: 125%;
+#main > div > #button {
+    position: relative;
+    top: 10%;
+    --color: var(--ion-color-light, white);
+    width: 80%;
+}
+
+#login {
+    position: relative;
+    top:12%;
+}
+
+span {
+    color: var(--ion-color-primary, black);
 }
