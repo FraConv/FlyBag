@@ -1,0 +1,49 @@
+#main {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#main > img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:35%;
+    left:50%;
+}
+
+#main > div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 40%;
+    top: 75%;
+    left: 50%;
+
+    justify-content: space-between;
+    text-align: center;
+}
+
+#main > div > h1 {
+    margin-bottom: auto;
+}
+
+#main > div > * {
+    color: black;
+    font-family: "Gotham", sans-serif;
+}
+
+#main > div > #button {
+    position: relative;
+    top: 10%;
+    --color: var(--ion-color-light, white);
+    width: 80%;
+}
+
+#plogin {
+    position: relative;
+    top:12%;
+}
+
+span {
+    color: var(--ion-color-primary, black);
+}

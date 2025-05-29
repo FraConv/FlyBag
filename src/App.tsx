@@ -8,7 +8,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 
 import Analytics from './pages/Analytics';
-import Login from './pages/Login';
+import Landing from './pages/Landing';
 import Scan from './pages/Scan';
 import Shop from './pages/Shop';
 import Recensioni from './pages/Recensioni';
@@ -29,15 +29,16 @@ import Tutorial from './pages/user/Tutorial';
 import Profile from './pages/user/Profile';
 import Tracking from './pages/user/Tracking';
 import MerchantTutorial from './pages/merchant/MerchTutorial';
+import Login from './pages/Login';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/Login" component={Login} />
+          <Route exact path="/landing" component={Landing} />
+          <Route exact path="/login" component={Login} />
 
           {/* Merchant */}
           <Route exact path="/merchant/tutorial" component={MerchantTutorial} />
@@ -55,7 +56,6 @@ const App: React.FC = () => (
           
 
         </IonRouterOutlet>
-      </IonTabs>
     </IonReactRouter>
   </IonApp>
 );

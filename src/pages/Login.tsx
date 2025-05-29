@@ -1,17 +1,22 @@
-import { IonButton, IonPage, IonRouterLink } from "@ionic/react";
+import { IonBackButton, IonButton, IonHeader, IonIcon, IonPage, IonToolbar } from "@ionic/react";
+import { arrowBack } from "ionicons/icons"
 import React from "react"
 import "./Login.css"
-import logo from "/logo_no_text.svg"
+import { useHistory } from "react-router";
 
 const Login: React.FC = () => {
+    const history = useHistory();
+
     return (
-        <IonPage id="main">
-            <img src={logo} alt="Nope" />
-            <div>
-                <h1>Benvenuto in <span>Flybag</span></h1>
-                <p>Let me penetrate you</p>
-                <IonButton color="primary" shape="round" id="button" routerLink="/analytics">Create An Account</IonButton>
-                <p id="login">Already have an account? <IonRouterLink color={"medium"} routerLink="/user/tutorial">Login</IonRouterLink> </p>
+        <IonPage id="login-login">
+            <div id="login-header">
+                <h1>Log into account</h1>
+                <IonButton shape="round" fill="clear" onClick={() => {
+                    history.goBack();
+                }}>
+                    <IonIcon icon={arrowBack} slot="icon-only" color="dark" size="large" ></IonIcon>
+                </IonButton>
+                
             </div>
         </IonPage>
     );

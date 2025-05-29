@@ -1,49 +1,29 @@
-#main {
-    background-color: white;
+#login-login {
     width: 100%;
     height: 100%;
 }
 
-#main > img {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top:35%;
-    left:50%;
-}
-
-#main > div {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 40%;
-    top: 75%;
-    left: 50%;
-
-    justify-content: space-between;
+#login-header {
+    position: relative;
+    
+    width: 100%;
+    height: 10vh;
     text-align: center;
 }
 
-#main > div > h1 {
-    margin-bottom: auto;
+#login-header > ion-button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 10%;
 }
 
-#main > div > * {
-    color: black;
-    font-family: "Gotham", sans-serif;
-}
-
-#main > div > #button {
-    position: relative;
-    top: 10%;
-    --color: var(--ion-color-light, white);
-    width: 80%;
-}
-
-#login {
-    position: relative;
-    top:12%;
-}
-
-span {
-    color: var(--ion-color-primary, black);
+#login-header > h1 {
+    position: absolute;
+    color: var(--ion-color-dark, black);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    width: 100%;
 }
