@@ -1,0 +1,467 @@
+/* Stili per la pagina di dettaglio del negozio */
+
+/* Header e stato del negozio */
+.shop-header .shop-status {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-family: 'Gotham', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.shop-header .shop-status.open {
+  background-color: #eafcf3;
+  color: #00C493;
+}
+
+.shop-header .shop-status.closed {
+  background-color: #f5f5f5;
+  color: #888;
+}
+
+/* Immagine principale del negozio */
+.shop-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+/* Stili per il carosello Swiper */
+.shop-images-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-images-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stili personalizzati per la paginazione */
+.shop-images-swiper .swiper-pagination {
+  bottom: 20px !important;
+  z-index: 10;
+}
+
+.shop-images-swiper .custom-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+  margin: 0 4px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+}
+
+.shop-images-swiper .custom-bullet-active {
+  background-color: #00C493 !important;
+  transform: scale(1.2) !important;
+  box-shadow: 0 2px 8px rgba(0, 196, 147, 0.3) !important;
+}
+
+.share-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 15; /* Sopra il carosello e la paginazione */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.share-button:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.share-button:active {
+  transform: scale(0.95);
+}
+
+.share-button .share-icon {
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Descrizione del negozio */
+.shop-description {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.shop-description p {
+  margin: 0;
+  font-family: 'Gotham', sans-serif;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Sezione informazioni negozio */
+.shop-info {
+  padding-bottom: 8px;
+}
+
+.shop-title-section h1 {
+  margin: 0 0 4px 0;
+  font-family: 'Gotham', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #00C493;
+}
+
+.shop-title-section .shop-type {
+  margin: 0;
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Sezione articoli in evidenza */
+.featured-section h2 {
+  margin: 0 0 16px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.featured-items-grid {
+  display: flex;
+  overflow-x: auto;
+  padding: 8px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.featured-items-grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+.featured-item {
+  flex: 0 0 auto;
+  width: 100px;
+  margin-right: 16px;
+  text-align: center;
+}
+
+.item-image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.item-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.featured-item h4 {
+  margin: 0 0 4px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.featured-item p {
+  margin: 0;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Orari di apertura */
+.time-table h2 {
+  margin: 0 0 16px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.time-row span {
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.time-row span:last-child {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Sezione proprietario */
+.owner-section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.owner-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.owner-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.owner-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.owner-details h3 {
+  margin: 0 0 4px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.owner-details p {
+  margin: 0;
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.owner-social {
+  display: flex;
+}
+
+.social-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+/* Sezione posizione */
+.location-section h2 {
+  margin: 0 0 16px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Sezione Google Maps */
+.google-map-container {
+  margin-bottom: 16px;
+}
+
+.shop-location-map {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.shop-location-map:hover {
+  box-shadow: 0 4px 16px rgba(0, 196, 147, 0.2);
+}
+
+.location-address {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.location-address p {
+  margin: 0 0 4px 0;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.location-address span {
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Fallback per mappa - manteniamo i vecchi stili per compatibilità */
+.map-fallback {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.map-fallback:hover {
+  transform: scale(1.02);
+}
+
+/* Sezione recensioni */
+.reviews-section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.rating-summary {
+  display: flex;
+  align-items: center;
+}
+
+.rating-stars {
+  margin-right: 8px;
+  color: #FFD700;
+}
+
+.rating-value {
+  font-family: 'Gotham', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.featured-review {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 196, 147, 0.1);
+  transition: all 0.3s ease;
+}
+
+.featured-review:hover {
+  box-shadow: 0 6px 20px rgba(0, 196, 147, 0.15);
+  transform: translateY(-2px);
+}
+
+.review-text {
+  margin: 0 0 16px;
+  font-family: 'Gotham', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.show-more-btn {
+  --padding-start: 0;
+  --padding-end: 0;
+  height: 30px;
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.reviewer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviewer-details h4 {
+  margin: 0 0 2px;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.reviewer-details p {
+  margin: 0;
+  font-family: 'Gotham', sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+.view-all-reviews {
+  --background: #FFFFFF;
+  --color: #00C493;
+  --border-radius: 12px;
+  --border-style: solid;
+  --border-width: 1px;
+  --border-color: #00C493;
+  font-family: 'Gotham', sans-serif;
+  font-weight: 500;
+  margin-top: 8px;
+  height: 44px;
+}
+
+/* Stati di loading ed errore */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+}
+
+.loading-container p, .error-container p {
+  margin-top: 16px;
+  font-family: 'Gotham', sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+.error-container h2 {
+  margin: 0 0 8px;
+  font-family: 'Gotham', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}

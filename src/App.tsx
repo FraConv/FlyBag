@@ -12,6 +12,9 @@ import Landing from './pages/Landing';
 import Scan from './pages/Scan';
 import Shop from './pages/Shop';
 import Recensioni from './pages/Recensioni';
+import ShopList from './pages/ShopList';
+import ShopDetail from './pages/ShopDetail';
+import ShopReviews from './pages/ShopReviews';
 
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
@@ -35,8 +38,7 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-        <IonRouterOutlet>
+    <IonReactRouter>        <IonRouterOutlet>
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/login" component={Login} />
 
@@ -46,14 +48,18 @@ const App: React.FC = () => (
           <Route exact path="/Scan" component={Scan} />
           <Route exact path="/Shop" component={Shop} />
           <Route exact path="/Recensioni" component={Recensioni} />
-              {/* User */}
+          
+          {/* Shops */}
+          <Route exact path="/shops" component={ShopList} />
+          <Route exact path="/shop/:id" component={ShopDetail} />
+          <Route exact path="/shop/:id/reviews" component={ShopReviews} />
+          
+          {/* User */}
           <Route exact path="/user/tutorial" component={Tutorial} />
           <Route exact path="/user/profile" component={Profile} />
           <Route exact path="/user/tracking" component={Tracking} />
           <Route exact path="/user/tracking/:orderId" component={Tracking} />
           <Route exact path="/" render={() => <Redirect to="/login" />} />
-
-          
 
         </IonRouterOutlet>
     </IonReactRouter>
