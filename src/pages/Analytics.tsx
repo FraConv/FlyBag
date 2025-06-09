@@ -26,13 +26,13 @@ const Analytics: React.FC = () => {
         </div>
       </div>
 
-      <IonButton fill='clear' className='border-[2px] border-[#00C493] w-[18vh] top-[25rem] rounded-full h-16 absolute left-[1.9rem] bottom-44'>
+      <IonButton fill='clear' className='border-[2px] border-[#d5e1e7] w-[18vh] top-[25rem] rounded-xl h-16 absolute left-[1.9rem] bottom-44'>
         <div className="flex flex-col ml-[-58px] text-left gap-1">
             <span style={{color:"black"}} className="text-black">Orders</span>
             <span style={{color:"black"}} className="text-black font-extrabold font-gotham">128</span>
         </div>
       </IonButton>
-      <IonButton fill='clear' className='border-[2px] border-[#00C493] w-[18vh] h-16 top-[25rem] rounded-full absolute right-[1.9rem] bottom-44 '>
+      <IonButton fill='clear' className='border-[2px] border-[#d5e1e7] w-[18vh] h-16 top-[25rem] rounded-xl absolute right-[1.9rem] bottom-44 '>
         <div className="flex flex-row  text-left gap-2">
         <img className='w-7' src="Inventario.svg" alt="" />
         <span style={{color:"black"}} className='font-bold text-[0.9rem] mt-2'>Inventory</span>
