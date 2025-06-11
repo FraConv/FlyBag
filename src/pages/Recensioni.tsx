@@ -106,7 +106,7 @@ const Recensioni: React.FC = () => {
 
 
           {/* Menu filtro */}
-          <IonButton fill="clear" className="bg-white w-[auto] h-[3rem] border-[2px] border-[#E5E7EB] mb-[-17rem] rounded-[13px] mt-6" onClick={() => setMenuOpen(prev => !prev)}>
+          <IonButton fill="clear" className="bg-white w-[auto] h-[3rem] grid-rows-3 border-[2px] border-[#E5E7EB] mb-[-17rem] rounded-[13px] mt-6" onClick={() => setMenuOpen(prev => !prev)}>
             <div className="flex flex-row gap-2 justify-center items-center">
               <span style={{ color: "black" }} className="font-medium text-[18px]">{filtro}</span>
               <img className={`w-4 transition-all duration-100 ${menuOpen ? "rotate-180" : "rotate-0"}`} src="Arrow giu.svg" alt="" />
