@@ -9,7 +9,7 @@ const Login: React.FC = () => {
     const history = useHistory();
 
     return (
-        <IonPage id="login-login">
+        <IonPage className="bg-white" id="login-login">
             <div id="login-header">
                 <h1>Log into account</h1>
                 <IonButton shape="round" fill="clear" onClick={() => {

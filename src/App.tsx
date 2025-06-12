@@ -34,6 +34,7 @@ import Tracking from './pages/user/Tracking';
 import MerchantTutorial from './pages/merchant/MerchTutorial';
 import Login from './pages/Login';
 import Inventory from './pages/Inventory';
+import InputLogin from './pages/InputLogin';
 
 setupIonicReact();
 
@@ -42,6 +43,7 @@ const App: React.FC = () => (
     <IonReactRouter>        <IonRouterOutlet>
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/Inputlogin" component={InputLogin} />
 
           {/* Merchant */}
           <Route exact path="/merchant/tutorial" component={MerchantTutorial} />

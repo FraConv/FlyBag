@@ -5,7 +5,7 @@ import logo from "/logo_no_text.svg"
 
 const Landing: React.FC = () => {
     return (
-        <IonPage id="main">
+        <IonPage className="bg-white" id="main">
             <img src={logo} alt="Nope" />
             <div>
                 <h1>Benvenuto in <span>Flybag</span></h1>
