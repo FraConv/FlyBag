@@ -35,6 +35,7 @@ import MerchantTutorial from './pages/merchant/MerchTutorial';
 import Login from './pages/Login';
 import Inventory from './pages/Inventory';
 import InputLogin from './pages/InputLogin';
+import QrScannerZxing from './pages/ScanQrCode';
 
 setupIonicReact();
 
@@ -52,6 +53,7 @@ const App: React.FC = () => (
           <Route exact path="/Shop" component={Shop} />
           <Route exact path="/Recensioni" component={Recensioni} />
           <Route exact path="/Inventory" component={Inventory} />
+          <Route exact path="/ScanQrCode" component={QrScannerZxing} />
           
           {/* Shops */}
           <Route exact path="/shops" component={ShopList} />

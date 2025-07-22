@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 256 257" style="enable-background:new 0 0 256 257;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{mask:url(#path-1-inside-1_1134_10001_1_);fill:#FFFFFF;fill-opacity:0.4;}
+	.st2{fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter_1_);}
+	.st3{mask:url(#path-3-inside-2_1134_10001_1_);fill:#FFFFFF;fill-opacity:0.4;}
+	.st4{fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter_2_);}
+	.st5{mask:url(#path-1-inside-1_1134_10001_2_);fill:#FFFFFF;fill-opacity:0.4;}
+	.st6{fill:#FFFFFF;filter:url(#Adobe_OpacityMaskFilter_3_);}
+	.st7{mask:url(#path-3-inside-2_1134_10001_2_);fill:#FFFFFF;fill-opacity:0.4;}
+	.st8{fill:#00C2A8;fill-opacity:0.56;}
+</style>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="34.2" y="34.8" width="25.1" height="25.1">
+		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="34.2" y="34.8" width="25.1" height="25.1" id="path-1-inside-1_1134_10001_1_">
+	<path class="st0" d="M35.6,45.1c0-4.9,4-8.9,8.9-8.9h14.8v23.6H35.6V45.1z"/>
+</mask>
+<path class="st1" d="M34.2,45.1c0-5.7,4.6-10.3,10.3-10.3h14.8v3H44.5c-4.1,0-7.4,3.3-7.4,7.4H34.2z M34.2,59.9V45.1
+	c0-5.7,4.6-10.3,10.3-10.3v3c-4.1,0-7.4,3.3-7.4,7.4v14.8H34.2z"/>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="196.7" y="34.8" width="25.1" height="25.1">
+		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="196.7" y="34.8" width="25.1" height="25.1" id="path-3-inside-2_1134_10001_1_">
+	<path class="st2" d="M196.7,36.3h14.8c4.9,0,8.9,4,8.9,8.9v14.8h-23.6V36.3z"/>
+</mask>
+<path class="st3" d="M196.7,34.8h14.8c5.7,0,10.3,4.6,10.3,10.3h-3c0-4.1-3.3-7.4-7.4-7.4h-14.8V34.8z M211.5,34.8
+	c5.7,0,10.3,4.6,10.3,10.3v14.8h-3V45.1c0-4.1-3.3-7.4-7.4-7.4V34.8z"/>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="196.7" y="197.1" width="25.1" height="25.1">
+		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="196.7" y="197.1" width="25.1" height="25.1" id="path-1-inside-1_1134_10001_2_">
+	<path class="st4" d="M220.4,211.9c0,4.9-4,8.9-8.9,8.9h-14.8v-23.6h23.6V211.9z"/>
+</mask>
+<path class="st5" d="M221.8,211.9c0,5.7-4.6,10.3-10.3,10.3h-14.8v-3h14.8c4.1,0,7.4-3.3,7.4-7.4H221.8z M221.8,197.1v14.8
+	c0,5.7-4.6,10.3-10.3,10.3v-3c4.1,0,7.4-3.3,7.4-7.4v-14.8H221.8z"/>
+<defs>
+	<filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="34.2" y="197.1" width="25.1" height="25.1">
+		<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="34.2" y="197.1" width="25.1" height="25.1" id="path-3-inside-2_1134_10001_2_">
+	<path class="st6" d="M59.3,220.7H44.5c-4.9,0-8.9-4-8.9-8.9v-14.8h23.6V220.7z"/>
+</mask>
+<path class="st7" d="M59.3,222.2H44.5c-5.7,0-10.3-4.6-10.3-10.3h3c0,4.1,3.3,7.4,7.4,7.4h14.8V222.2z M44.5,222.2
+	c-5.7,0-10.3-4.6-10.3-10.3v-14.8h3v14.8c0,4.1,3.3,7.4,7.4,7.4V222.2z"/>
+<path class="st8" d="M35.6,127.1h184.7c0.8,0,1.5,0.7,1.5,1.5l0,0c0,0.8-0.7,1.5-1.5,1.5H35.6c-0.8,0-1.5-0.7-1.5-1.5l0,0
+	C34.2,127.8,34.8,127.1,35.6,127.1z"/>
+</svg>
