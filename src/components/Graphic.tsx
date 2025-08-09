@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -13,17 +14,22 @@ const data = [
 ];
 
 export default function Graphic() {
+  const history = useHistory();
+
+
   return (
-    <div className="absolute top-32 left-1/2 transform -translate-x-1/2">
-      <Card className="bg-transparent border-[2px] border-[#d5e1e7] text-white rounded-xl p-6 w-[40vh] h-[240px] shadow-none">
+    <div
+      className="absolute top-32 left-1/2 transform -translate-x-1/2 cursor-pointer"
+      onClick={() => history.push("/Entrate")} // ⬅️
+    >
+      <Card className="bg-transparent border-[2px] border-[#d5e1e7] text-white rounded-xl p-6 w-[40vh] h-[240px] shadow-none hover:scale-105 transition">
         <CardContent className="p-0">
           <div className="mb-4">
             <h3 className="text-sm text-black">Total Revenue</h3>
-            <p className="text-3xl text-black font-bold">+ $999.999</p>
+            <p className="text-3xl text-black font-bold">$553.56</p>
             <p className="text-sm text-black">+20.1% from last month</p>
           </div>
 
-          {/* Grafico con altezza personalizzata */}
           <div className="h-48">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={data}>

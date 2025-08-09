@@ -36,6 +36,10 @@ import Login from './pages/Login';
 import Inventory from './pages/Inventory';
 import InputLogin from './pages/InputLogin';
 import QrScannerZxing from './pages/ScanQrCode';
+import Notifications from './pages/Notifiche';
+import Entrate from './pages/Entrate';
+
+
 
 setupIonicReact();
 
@@ -53,7 +57,11 @@ const App: React.FC = () => (
           <Route exact path="/Shop" component={Shop} />
           <Route exact path="/Recensioni" component={Recensioni} />
           <Route exact path="/Inventory" component={Inventory} />
-          <Route exact path="/ScanQrCode" component={QrScannerZxing} />
+          <Route exact path="/Notifiche" component={Notifications} />
+          <Route exact path="/Entrate" component={Entrate} />
+          
+  
+          
           
           {/* Shops */}
           <Route exact path="/shops" component={ShopList} />
@@ -66,6 +74,7 @@ const App: React.FC = () => (
           <Route exact path="/user/tracking" component={Tracking} />
           <Route exact path="/user/tracking/:orderId" component={Tracking} />
           <Route exact path="/" render={() => <Redirect to="/login" />} />
+          <Route exact path="/ScanQrCode" component={QrScannerZxing} />
 
         </IonRouterOutlet>
     </IonReactRouter>

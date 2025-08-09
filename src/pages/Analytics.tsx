@@ -3,20 +3,27 @@ import { useHistory } from 'react-router-dom';
 import NavBar from "../components/NavBar";
 import Graphic from '@/components/Graphic';
 import Profilo from '@/components/Profilo';
-import Notifiche from '@/components/Notifiche';
+import Notifications from './Notifiche';
+import { recensioni } from './recensioniData';
 
 const Analytics: React.FC = () => {
   const history = useHistory();
+    const recensioniRecenti = [...recensioni]
+    .sort((a, b) => new Date(b.data).getTime() - new Date(a.data).getTime())
+    .slice(0, 2); // Prendi solo 2
 
   return (
     <IonPage className='bg-white'>
       <div className='w-44 left-[2rem] top-14 fixed z-10'><img src="flybag logo.svg" alt="" /></div>
-      <div className='grid grid-cols-2 gap-5 fixed right-8 top-14'>
-        <div className='absolute right-[5rem] top-[0.5rem]'><Notifiche></Notifiche></div>
-      </div>
+  
+  <div>
+       <Notifications></Notifications>
+       <Profilo></Profilo>
+       </div>
+      
 
       <Graphic />
-      <div className='border-[2px] border-[#d5e1e7] w-[40vh] rounded-xl h-[30vh] top-[31rem] absolute left-1/2 transform -translate-x-1/2 pl-5 pt-4 pr-4 flex flex-col gap-4'>
+    <div className='border-[2px] border-[#d5e1e7] w-[40vh] rounded-xl h-[34vh] top-[31rem] absolute left-1/2 transform -translate-x-1/2 pl-5 pt-4 pr-4 flex flex-col gap-4'>
         <div className="flex gap-7 items-center w-full">
           <span style={{color:"black"}} className='text-black font-bold text-[16px]'>Recensioni recenti</span>
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => history.push('/Recensioni')}>
@@ -24,6 +31,22 @@ const Analytics: React.FC = () => {
             <img className='w-2 pt-0.5' src="Arrow_r.svg" alt="Arrow" />
           </div>
         </div>
+
+        {/* Qui visualizzi solo 2 recensioni */}
+        {recensioniRecenti.map(r => (
+          <div key={r.id} className="bg-white rounded   mb-2 ">
+            <div className="flex items-center gap-3">
+              <img src={r.imgprofilo} alt={`Profilo di ${r.nome}`} className="w-8 h-8 rounded-full" />
+              <div>
+                <p className="font-semibold text-sm text-black">{r.nome}</p>
+                <p className="text-xs text-gray-500">{new Date(r.data).toLocaleDateString()}</p>
+              </div>
+            </div>
+            <p className="mt-1 text-sm text-black">{r.commento}</p>
+            <p className="text-black">⭐ {r.voto}</p>
+          </div>
+        ))}
+
       </div>
 
       <IonButton fill='clear' className='border-[2px] border-[#d5e1e7] w-[18vh] top-[25rem] rounded-xl h-16 absolute left-[1.9rem] bottom-44'>
@@ -39,7 +62,7 @@ const Analytics: React.FC = () => {
         </div>
       </IonButton>
 
-      <Profilo></Profilo>
+      
       <NavBar />
     </IonPage>
   );

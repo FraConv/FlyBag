@@ -1,6 +1,9 @@
 import { IonButton, IonPage } from "@ionic/react"
 import { useState, useEffect, useRef } from "react"
 import { useHistory } from "react-router";
+import { ChevronLeft } from "lucide-react";
+import { closeOutline } from 'ionicons/icons';
+import { IonIcon } from '@ionic/react';
 
 const Scan: React.FC = () => {
 
@@ -16,6 +19,7 @@ const Scan: React.FC = () => {
   const [photo, setPhoto] = useState<string | null>(null);
   const [showNotice, setShowNotice] = useState<boolean>(false);
   const [fade, setFade] = useState(false);
+  const [show, setShow] = useState(false);
 
   const toggleNotice = () => {
     setShowNotice(prev => !prev);
@@ -82,8 +86,8 @@ const Scan: React.FC = () => {
 
   return (
     <IonPage className='bg-white'>
-      <button onClick={goBack} className="bg-[#005640] text-white px-3 py-1 rounded-full shadow z-50">
-  Torna indietro
+      <button onClick={goBack} className=" text-white px-3 py-1 rounded-full w-5 shadow z-10 top-16 left-5 absolute">
+  <ChevronLeft className="z-10"/>
 </button>
       <div className="bg-white h-full w-full absolute left-0 top-0 items-center">
       <div className="absolute top-16 w-full h-auto -translate-x-1/2 left-1/2 text-white flex justify-center">
@@ -105,6 +109,12 @@ const Scan: React.FC = () => {
           <img src="Icon camera.svg" className="scale-[125%]" alt="" />
         </div>
 
+        <div className="absolute left-7 mt-10 top-12"  onClick={() => setShow(true)}>
+          <div className="w-[45px] h-[45px] mt-5 flex items-center justify-center text-white rounded-full shadow-md cursor-pointer">
+            <img className="scale-[100%]" src="info.svg" alt="" />
+          </div>
+        </div>
+
         <div className="absolute left-7 mt-10">
           <div className="w-[45px] h-[45px] mt-5 flex items-center justify-center border-3 border-[#00C493] bg-white text-white rounded-full shadow-md cursor-pointer">
             <img className="scale-[55%]" src="Group 105 (1).svg" alt="" />
@@ -124,15 +134,57 @@ const Scan: React.FC = () => {
         </div>
       </div>
 
+      {show && (
+        <div className="flex justify-center items-center ">
+              <div className="absolute  top-48 w-80 bg-white rounded-xl shadow-lg border border-gray-200 p-5 z-10">
+                {/* Header */}
+                <div className="flex justify-between items-center border-b pb-2 mb-3">
+                  <h3 className="text-base font-semibold text-black">Come funziona?</h3>
+             
+                </div>
+      
+                {/* Istruzioni */}
+                <ol className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <div className="bg-teal-400 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</div>
+                    Trova il QR code del negozio
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-teal-400 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">2</div>
+                    Inquadra con la fotocamera
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-teal-400 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">3</div>
+                    Aggiungi i prodotti scelti
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-teal-400 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">4</div>
+                    Inserisci le informazioni necessarie
+                  </li>
+                </ol>
+      
+                {/* Bottone */}
+                <IonButton
+                  size='default'
+                  shape='round'
+                  onClick={() => setShow(false)}
+                  className="mt-4 w-full  text-white font-semibold py-2 rounded-full transition"
+                >
+                  Ho capito
+                </IonButton>
+              </div>
+              </div>
+            )}
+
       <canvas ref={canvasRef} style={{ display: "none" }} />
 
       {photo && (
         <div>
           <div
-            className="w-[30px] h-[30px] flex justify-center rounded-full bg-white mt-[-630px] fixed z-20 items-center ml-7 cursor-pointer"
+            className="w-[30px] h-[30px] flex justify-center rounded-full right-7 bg-white top-24 fixed z-20 items-center  cursor-pointer"
             onClick={toggleNotice}
           >
-            <img className="scale-100" src="icon (6).svg" alt="" />
+            <IonIcon className="text-black size-64" icon={closeOutline} slot="icon-only" />
           </div>
           <img
             src={photo}
