@@ -2,7 +2,6 @@ import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonRouterOutlet,
-  IonTabs,
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -38,6 +37,9 @@ import InputLogin from './pages/InputLogin';
 import QrScannerZxing from './pages/ScanQrCode';
 import Notifications from './pages/Notifiche';
 import Entrate from './pages/Entrate';
+import QrCodeResult from './pages/QrCodeResult';
+
+
 
 
 
@@ -75,6 +77,9 @@ const App: React.FC = () => (
           <Route exact path="/user/tracking/:orderId" component={Tracking} />
           <Route exact path="/" render={() => <Redirect to="/login" />} />
           <Route exact path="/ScanQrCode" component={QrScannerZxing} />
+          <Route exact path="/QrCodeResult" component={QrCodeResult} />
+
+          
 
         </IonRouterOutlet>
     </IonReactRouter>

@@ -1,44 +1,45 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { IonPage, IonText, IonButton } from '@ionic/react';
+import { IonPage, IonText, IonButton, useIonRouter } from '@ionic/react';
 import { BrowserMultiFormatReader, Result } from '@zxing/library';
 import { ChevronLeft } from 'lucide-react';
-import { IonModal } from '@ionic/react';
 
 const QrScannerZxing: React.FC = () => {
   const [result, setResult] = useState<string>('Nessun risultato');
   const videoRef = useRef<HTMLVideoElement>(null);
   const codeReader = useRef<BrowserMultiFormatReader>();
-  const [showManuaalCode, setShowManuaalCode] = useState(false)
+  const [showManuaalCode, setShowManuaalCode] = useState(false);
   const [manualCode, setManualCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [showResultPage, setShowResultPage] = useState(false);
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-useEffect(() => {
-  codeReader.current = new BrowserMultiFormatReader();
+  const router = useIonRouter();
 
-  if (videoRef.current) {
-    codeReader.current.decodeFromVideoDevice(null, videoRef.current, (result: Result | undefined, err) => {
-      if (result) {
-        setResult(result.getText());
-        codeReader.current?.reset();
+  useEffect(() => {
+    codeReader.current = new BrowserMultiFormatReader();
 
-        setIsLoading(true); // ✅ Mostra il loader subito
+    if (videoRef.current) {
+      codeReader.current.decodeFromVideoDevice(null, videoRef.current, (result: Result | undefined) => {
+        if (result) {
+          setResult(result.getText());
+          codeReader.current?.reset();
 
-        setTimeout(() => {
-          setIsLoading(false);
-          setShowResultPage(true);
-        }, 2500); // ⏳ Dopo 1.5s mostra la pagina con il risultato
-      }
-    });
-  }
+          setIsLoading(true);
 
-  return () => {
-    codeReader.current?.reset();
-  };
-}, []);
+          setTimeout(() => {
+            setIsLoading(false);
+            // Salva il risultato in sessionStorage
+            sessionStorage.setItem('qrResult', result.getText());
+            // Naviga alla pagina del risultato
+            router.push('/QrCodeResult');
+          }, 2500);
+        }
+      });
+    }
 
-
+    return () => {
+      codeReader.current?.reset();
+    };
+  }, [router]);
 
   return (
     <IonPage className="relative">
@@ -156,26 +157,6 @@ useEffect(() => {
   </div>
 )}
 
-{showResultPage && (
-  <div className="absolute top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center justify-center text-center px-4">
-    <IonText>
-      <h2 className="text-black text-2xl font-bold mb-4">QR Code Scannerizzato!</h2>
-      <p className="text-black text-lg">{result}</p>
-    </IonText>
-
-    <IonButton
-      fill="clear"
-      className="mt-6 border border-gray-400 text-black rounded-full"
-      onClick={() => {
-        setShowResultPage(false);
-        setResult('Nessun risultato');
-        codeReader.current?.reset();
-      }}
-    >
-      Torna alla scansione
-    </IonButton>
-  </div>
-)}
 
     </IonPage>
   );

@@ -264,6 +264,11 @@ body {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+ion-modal {
+  --border-radius: 35px; /* arrotondamento globale */
+  --box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.2); /* opzionale */
+}
+
  @layer base {
   * {
     @apply border-border outline-ring/50;
